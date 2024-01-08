@@ -1,1 +1,4 @@
 myenv
+.coverage
+coverage-reports
+__pycache__

@@ -16,8 +16,4 @@ class OperacionesNumeros:
     def divicion(self):
         if self.b==0:
             raise ZeroDivisionError()
-
-
-if __name__=="__main__":
-    ope=OperacionesNumeros(a=1,b=3)
-    print(ope.suma())
+        return self.a/self.b
