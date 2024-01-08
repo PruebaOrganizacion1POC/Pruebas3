@@ -1,7 +1,7 @@
 import unittest
 import sys,os
 sys.path.append(os.getcwd())
-from funciones.clase import OperacionesNumeros
+from funciones.app import OperacionesNumeros
 
 class test_clase(unittest.TestCase):
     
@@ -33,5 +33,5 @@ class test_clase(unittest.TestCase):
         ope_no_cero=OperacionesNumeros(a=valor_a,b=valor_b_no_cero)
         resultado_divicion_no_cero=ope_no_cero.divicion()
         self.assertEqual(resultado_divicion_no_cero,valor_a/valor_b_no_cero)
-        self.assertRaises(ZeroDivisionError,OperacionesNumeros(a=valor_a,b=valor_b_cero))
+        self.assertRaises(ZeroDivisionError,OperacionesNumeros(a=valor_a,b=valor_b_cero).divicion)
         
