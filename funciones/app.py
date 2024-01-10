@@ -13,9 +13,15 @@ class OperacionesNumeros:
     def multiplicacion(self):
         return self.a*self.b
 
-    def divicion(self):
+    def division(self):
         if self.b==0:
             raise ZeroDivisionError()
         return self.a/self.b
         
+    def potenciacion(self):
+        return self.a**self.b
     
+    def radicacion(self):
+        if self.b==0:
+            raise ZeroDivisionError()
+        return self.a**(1/self.b)
