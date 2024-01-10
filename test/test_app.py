@@ -12,6 +12,9 @@ class test_clase(unittest.TestCase):
         resultado_suma=ope.suma()
         self.assertEqual(resultado_suma,valor_a+valor_b)
         
+    def prueba(self):
+        pass
+        
     def test_multiplicacion(self):
         valor_a=2
         valor_b=2
