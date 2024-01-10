@@ -27,12 +27,27 @@ class test_clase(unittest.TestCase):
         resultado_resta=ope.resta()
         self.assertEqual(resultado_resta,valor_a-valor_b)
         
-    def test_divicion(self):
+    def test_division(self):
         valor_a=2
         valor_b_no_cero=2
         valor_b_cero=0
         ope_no_cero=OperacionesNumeros(a=valor_a,b=valor_b_no_cero)
-        resultado_divicion_no_cero=ope_no_cero.divicion()
-        self.assertEqual(resultado_divicion_no_cero,valor_a/valor_b_no_cero)
-        self.assertRaises(ZeroDivisionError,OperacionesNumeros(a=valor_a,b=valor_b_cero).divicion)
+        resultado_division_no_cero=ope_no_cero.division()
+        self.assertEqual(resultado_division_no_cero,valor_a/valor_b_no_cero)
+        self.assertRaises(ZeroDivisionError,OperacionesNumeros(a=valor_a,b=valor_b_cero).division)
         
+    def test_potenciacion(self):
+        valor_a=2
+        valor_b=2
+        ope=OperacionesNumeros(a=valor_a, b=valor_b)
+        resultado_potenciacion=ope.potenciacion()
+        self.assertEqual(resultado_potenciacion,valor_a**valor_b)
+
+    def test_radicacion(self):
+        valor_a=2
+        valor_b_no_cero=2
+        valor_b_cero=0
+        ope_no_cero=OperacionesNumeros(a=valor_a,b=valor_b_no_cero)
+        resultado_radicacion_no_cero=ope_no_cero.radicacion()
+        self.assertEqual(resultado_radicacion_no_cero,valor_a**(1/valor_b_no_cero))
+        self.assertRaises(ZeroDivisionError,OperacionesNumeros(a=valor_a,b=valor_b_cero).radicacion)
