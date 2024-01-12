@@ -9,7 +9,7 @@ class test_clase(unittest.TestCase):
         valor_a=2
         valor_b=2
         ope=OperacionesNumeros(a=valor_a,b=valor_b)
-        resultado_suma=ope.Suma()
+        resultado_suma=ope.suma()
         self.assertEqual(resultado_suma,valor_a+valor_b)
         
         
