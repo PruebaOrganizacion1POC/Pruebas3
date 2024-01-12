@@ -4,7 +4,7 @@ class OperacionesNumeros:
         self.a=a
         self.b=b
     
-    def Suma(self):
+    def suma(self):
         return self.a+self.b
     
     def resta(self):
